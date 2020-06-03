@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Fernandes Bank's</title>
+	<title>Fernandes Bank's!</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -25,22 +25,52 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body >
+<body>
 	
-	<div class="limiter" >
-		<div class="container-login100" >
-			<div class="wrap-login100" style="background-image: '../images/background.jpg';">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="post" action="php/login.php">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="post" action="php/registro.php">
 					<span class="login100-form-title">
-						<u>Fernandes Bank's</u><br>Entre na sua conta!
-                        </span>
+						<u>Abra uma nova conta!</u>
+					</span>
 
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Por favor entre com sua conta">
-						<input class="input100" type="text" name="conta" placeholder="Sua conta">
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Nome Completo">
+						<input class="input100" type="text" name="nome" placeholder="Nome Completo">
 						<span class="focus-input100"></span>
 					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Por favor entrar com a senha">
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Gênero">
+						<select class="input100">
+							<option value="#">Qual o seu sexo?</option>
+							<option value="masculino">Masculino</option>
+							<option value="feminino">Feminino</option>
+							<option value="outro">Outro</option>
+							
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="CPF Correto!">
+						<input class="input100" type="cpf" name="cpf" placeholder="Digite seu CPF">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="RG Correto!">
+						<input class="input100" type="rg" name="rg" placeholder="Digite seu RG">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Digite sua data de nascimento">
+						<input class="input100" type="date" name="dataNascimento" placeholder="Data de nascimento">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Telefone">
+						<input class="input100" type="text" name="telefone" placeholder="Telefone">
+						<span class="focus-input100"></span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Coloque um e-mail válido">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+                    </div>
+                    <br>
+					<div class="wrap-input100 validate-input" data-validate = "Coloque uma senha válida">
 						<input class="input100" type="password" name="senha" placeholder="Senha">
 						<span class="focus-input100"></span>
 					</div>
@@ -48,16 +78,16 @@
 					<br>
 
 					<div class="container-login100-form-btn">
-						<input type="submit" value="Entrar" name="entrar" class="login100-form-btn">
+						<input type="submit" value="Registrar" name="registrar" class="login100-form-btn">
 					</div>
 
 					<div class="flex-col-c p-t-170 p-b-40">
-						<span class="txt1 p-b-9">
-							<u>Não tem conta no nosso banco??<br>Faça agora uma e saiba as vantagens!!</u>
+						<span class="txt1 p-b-9" style="color: orange;">
+							Já tem conta no nosso banco?
 						</span>
 
-						<a href="registro.html" class="txt3">
-							 Clique aqui e faça agora mesmo.
+						<a href="index.html" class="txt3" style="color: orange;">
+							Entre agora mesmo!
 						</a>
 					</div>
 				</form>
