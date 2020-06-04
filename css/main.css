@@ -147,10 +147,11 @@ iframe {
 
 .txt3 {
   font-family: Ubuntu-Bold;
-  font-size: 15px;
+  font-size: 14px;
   color: #57b846;
-  line-height: 1.4;
+  line-height: 1;
   text-transform: uppercase;
+  display: block;
 }
 
 
@@ -181,9 +182,9 @@ iframe {
 
 .wrap-login100 {
   
-  width: 500px;
+  width: 600px;
   background: green;
-  border-radius: 20px;
+  border-radius: 50px;
   overflow: hidden;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -298,7 +299,7 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 50px;
   width: 100%;
   height: 50px;
   background-color: #57b846;
