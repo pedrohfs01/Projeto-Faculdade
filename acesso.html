@@ -1,0 +1,119 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Fernandes Bank's</title>
+ <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<meta name="keywords" content="Fernandes Bank's, Banco Fernandes">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+		}
+		function mascara(i){
+   
+		var v = i.value;
+		
+		if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+			i.value = v.substring(0, v.length-1);
+			return;
+		}
+		
+		i.setAttribute("maxlength", "14");
+			if (v.length == 3 || v.length == 7) i.value += ".";
+			if (v.length == 11) i.value += "-";
+
+		}
+    </script>
+    <!-- //Meta-Tags -->
+	
+	<!-- css files -->
+	<link href="css/font-awesome2.min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/style2.css" rel="stylesheet" type="text/css" media="all"/>
+	<!-- //js src -->
+	<!-- google fonts -->
+	
+	<!-- //google fonts -->
+	
+</head>
+<body>
+	
+<div class="signupform">
+	<div class="container">
+		<fieldset style= "background-color: white; max-width:500px;
+		padding:16px;  width: 50%; margin: 0px auto;
+		border:2px solid green;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;"><h1 style="text-align: center; font-size: 45px;
+		color: orange;
+		font-weight: 700;
+		font-family: Source Sans Pro;">Painel do Cliente</h1></fieldset>
+		<!-- main content -->
+		<div class="agile_info">
+			<div class="w3l_form">
+				<div class="left_grid_info">
+					<b><h1 style="color: gray">R$ 0,00</h1></b>
+					<h2 style="color: gray">Agência: </h2>
+					<h2 style="color: gray">N° Conta: </h2>
+					<h2 style="color: gray">Nome Titular: </h2>
+					<br><br><br><br>
+					<fieldset><p>Deseja fazer qual tipo de transação? <br>(Sacar ou Depositar)</p><br>
+					<form action="#" method="post">
+						<div class="input-group">
+							<span class="fa fa-money" aria-hidden="true"></span>
+							<input type="text" id="dinheiro" placeholder="(R$0 - R$999,99)" required=""> 
+						</div><br><br>				
+							<button class="btn btn-danger btn-block" type="submit">Sacar</button >
+							<button class="btn btn-danger btn-block" type="submit">Depositar</button >                 
+					</form></fieldset>
+				</div>
+			</div>
+			<div class="w3_info">
+				<h1>Transfira dinheiro para outra conta</h1>
+				<p>Coloque os dados abaixo:</p>
+				<form action="#" method="post">
+					<label>Agência: </label>
+					<div class="input-group2">
+						<input type="text" maxlength="4" placeholder="Entre com a agência" required=""
+						onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
+					</div>
+					<label>Número da conta: </label>
+					<div class="input-group2">
+						<input type="text" maxlength="5"placeholder="Entre com o número da conta." required=""
+						onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					</div>
+					<label>CPF: </label>
+					<div class="input-group2" >
+						<input oninput="mascara(this)" type="text" placeholder="Entre com o cpf do beneficiado." required="">
+					</div>  
+					<label>Valor: </label>
+					<div class="input-group2">
+						<span class="fa fa-money" aria-hidden="true"></span>
+						<input type="text"class="dinheiro"placeholder="(R$0 - R$999,99)" required="">
+					</div> 						
+						<button class="btn btn-danger btn-block" type="submit">Transferir</button >                
+				</form>
+			</div>
+		</div>
+		<!-- //main content -->
+	</div>
+</div>
+	<script type="text/javascript">
+    $("#dinheiro, .dinheiro").mask("000,00");
+    </script>
+	
+</body>
+</html>
