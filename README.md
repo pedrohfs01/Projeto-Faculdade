@@ -5,6 +5,10 @@ Nome do Aluno: Pedro Henrique Fernandes Santos
 Turma: SI 3BN
 Matrícula: 201919543
 
+Tema: Banco
+Eu fiz um banco digital com pequenas funcionalidades mas tudo 100% na melhor lógica possível. Tem o CRUD, dá para criar, entrar, depositar, sacar, transferir(entre contas do banco) tudo digitalmente, e funciona de forma simbólica, tudo é guardado no banco de dados.
+Tem todos os testes e mascaras para CPF Telefone RG entre outros tudo bem configurado e não existe falhas até então.
+
 Peguei um template e editei ao meu gosto e fiz as devidas alterações, e fiz o back do trabalho todo. Fiz a conexão com um banco de dados na nuvem pelo google clouds.
 
 BANCO DE DADOS GOOGLE CLOUD:
