@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Fernandes Bank's!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+        <script>
+            function mascara(i){
+
+            var v = i.value;
+
+            if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+                    i.value = v.substring(0, v.length-1);
+                    return;
+            }
+
+            i.setAttribute("maxlength", "14");
+                    if (v.length == 3 || v.length == 7) i.value += ".";
+                    if (v.length == 11) i.value += "-";
+
+            }
+            
+        </script>
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="post" action="php/registro.php">
+					<span class="login100-form-title">
+						<u>Abra uma nova conta!</u>
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Nome Completo">
+						<input class="input100" type="text" name="nome" placeholder="Nome Completo">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Nome da Mãe">
+						<input class="input100" type="text" name="nomeMae" placeholder="Nome da mãe">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Gênero">
+						<select class="input100" name="genero">
+							<option value="#">Qual o seu gênero?</option>
+							<option value="M">Masculino</option>
+							<option value="F">Feminino</option>
+							<option value="O">Outro</option>
+							
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="CPF Inválido!">
+						<input class="input100" oninput="mascara(this)" type="cpf" name="cpf" placeholder="Digite seu CPF">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="RG Inválido!">
+						<input class="input100" type="rg" maxlength="10"name="rg" placeholder="Digite seu RG">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Selecione a UF">
+						<select class="input100" name="uf">
+							<option value="#">Qual é sua UF</option>
+							<option value="AC">Acre</option>
+							<option value="AL">Alagoas</option>
+							<option value="AP">Amapá</option>
+							<option value="AM">Amazonas</option>
+							<option value="BA">Bahia</option>
+							<option value="CE">Ceará</option>
+							<option value="DF">Distrito Federal</option>
+							<option value="ES">Espirito Santo</option>
+							<option value="GO">Goiás</option>
+							<option value="MA">Maranhão</option>
+							<option value="MS">Mato Grosso do Sul</option>
+							<option value="MT">Mato Grosso</option>
+							<option value="MG">Minas Gerais</option>
+							<option value="PA">Pará</option>
+							<option value="PB">Paraíba</option>
+							<option value="PR">Paraná</option>
+							<option value="PE">Pernambuco</option>
+							<option value="PI">Piauí</option>
+							<option value="RJ">Rio de Janeiro</option>
+							<option value="RN">Rio Grande do Norte</option>
+							<option value="RS">Rio Grande do Sul</option>
+							<option value="RO">Rondônia</option>
+							<option value="RR">Roraima</option>
+							<option value="SC">Santa Catarina</option>
+							<option value="SP">São Paulo</option>
+							<option value="SE">Sergipe</option>
+							<option value="TO">Tocantins</option>
+						</select>
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Digite sua data de nascimento">
+						<input class="input100" type="date" name="dataNascimento" placeholder="Data de nascimento">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Telefone Inválido">
+						<input class="input100" type="text" name="telefone" placeholder="Telefone Ex: (99) 99999 9999">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Endereço Inválido">
+						<input class="input100" type="text" name="endereco" placeholder="Seu endereço">
+						<span class="focus-input100"></span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Coloque um e-mail válido">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+                    </div>
+                    <br>
+					<div class="wrap-input100 validate-input" data-validate = "Coloque uma senha válida">
+						<input class="input100" type="password" name="senha" placeholder="Senha">
+						<span class="focus-input100"></span>
+					</div>
+
+					<br>
+
+					<div class="container-login100-form-btn">
+						<input type="submit" value="Registrar" name="registrar" class="login100-form-btn">
+					</div>
+
+					<div class="flex-col-c p-t-140 p-b-40">
+						<span class="txt1 p-b-9" style="color: white;">
+							Já tem conta no nosso banco?
+						</span>
+
+						<a href="login.html" class="txt3" style="color: white;">
+							Entre agora mesmo!
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
