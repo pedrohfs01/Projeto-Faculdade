@@ -2,25 +2,25 @@
     require("connectBD.php");
     session_start();
     
-    $usuario = $_POST["usuario"];
+    $cpf = $_POST["cpf"];
     $senha = $_POST["senha"];
     
     if(isset($_POST["entrar"])){
-        if(empty($usuario)){
+        if(empty($cpf)){
             msgJS("Campo usuário vázio.");
         }
         else if(empty($senha)){
             msgJS("Campo senha vázio.");
         }
         else{
-            $procura = "SELECT * FROM usuario WHERE nome = '$usuario' AND senha = '$senha';";
+            $procura = "SELECT * FROM cliente WHERE cpf = '$cpf' AND senha = '$senha';";
             $res = $connect -> query($procura);
 
             if($res -> num_rows > 0){
                 msgJS("Usuário Logado!");
-                echo "<script>window.location.href = 'acesso.php';</script>";
-                $_SESSION["usuario"] = $usuario;
+                $_SESSION["cpf"] = $cpf;
                 $_SESSION["senha"] = $senha;
+                echo "<script>window.location.href = 'acesso.php';</script>";
             }
             else{
                 msgJS("Usuário ou senha inválidos.");
@@ -31,7 +31,7 @@
         }
     }
     function voltaLogin(){
-        echo "<script>window.location.href = '../index.html';</script>";
+        echo "<script>window.location.href = '../login.html';</script>";
     }
     function msgJS($msg){
         echo "<script>alert('$msg')</script>";
