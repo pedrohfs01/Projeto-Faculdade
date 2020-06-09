@@ -24,6 +24,23 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+        <script>
+            function mascara(i){
+
+            var v = i.value;
+
+            if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+                    i.value = v.substring(0, v.length-1);
+                    return;
+            }
+
+            i.setAttribute("maxlength", "14");
+                    if (v.length == 3 || v.length == 7) i.value += ".";
+                    if (v.length == 11) i.value += "-";
+
+            }
+            
+        </script>
 </head>
 <body>
 	
@@ -46,24 +63,24 @@
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Gênero">
 						<select class="input100" name="genero">
 							<option value="#">Qual o seu gênero?</option>
-							<option value="masculino">Masculino</option>
-							<option value="feminino">Feminino</option>
-							<option value="outro">Outro</option>
+							<option value="M">Masculino</option>
+							<option value="F">Feminino</option>
+							<option value="O">Outro</option>
 							
 						</select>
 						<span class="focus-input100"></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-16" data-validate="CPF Inválido!">
-						<input class="input100" type="cpf" name="cpf" placeholder="Digite seu CPF">
+						<input class="input100" oninput="mascara(this)" type="cpf" name="cpf" placeholder="Digite seu CPF">
 						<span class="focus-input100"></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-16" data-validate="RG Inválido!">
-						<input class="input100" type="rg" name="rg" placeholder="Digite seu RG">
+						<input class="input100" type="rg" maxlength="10"name="rg" placeholder="Digite seu RG">
 						<span class="focus-input100"></span>
 					</div>
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Selecione a UF">
 						<select class="input100" name="uf">
-							<option value="">Qual é sua UF</option>
+							<option value="#">Qual é sua UF</option>
 							<option value="AC">Acre</option>
 							<option value="AL">Alagoas</option>
 							<option value="AP">Amapá</option>
@@ -127,7 +144,7 @@
 							Já tem conta no nosso banco?
 						</span>
 
-						<a href="index.html" class="txt3" style="color: white;">
+						<a href="login.html" class="txt3" style="color: white;">
 							Entre agora mesmo!
 						</a>
 					</div>

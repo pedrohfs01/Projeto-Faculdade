@@ -24,6 +24,23 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+        <script>
+            function mascara(i){
+
+            var v = i.value;
+
+            if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+                    i.value = v.substring(0, v.length-1);
+                    return;
+            }
+
+            i.setAttribute("maxlength", "14");
+                    if (v.length == 3 || v.length == 7) i.value += ".";
+                    if (v.length == 11) i.value += "-";
+
+            }
+            
+        </script>
 </head>
 <body >
 	
@@ -36,7 +53,7 @@
                         </span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Por favor entre com seu cpf">
-						<input class="input100" type="text" name="cpf" placeholder="CPF">
+						<input class="input100" type="text" oninput="mascara(this)" name="cpf" placeholder="CPF">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -56,7 +73,7 @@
 							<u>Esqueci a senha.</u>
 						</a>
 					</div>
-					<div class="flex-col-c p-t-120 p-b-40">
+					<div class="flex-col-c p-t-100 p-b-40">
 						
 						<span class="txt1 p-b-9" style="color: white;">
 							Ainda não tem conta no nosso banco?<br>Faça uma e saiba as vantagens de ser cliente!
