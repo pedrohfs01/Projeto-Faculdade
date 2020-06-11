@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION["cpf"]) && isset($_SESSION["senha"])){
+    echo "<script>"
+            . "alert('Você está logado já!');"
+            . "window.location.href = 'acesso.php';"
+            . "</script>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -45,11 +56,11 @@
 <body >
 	
 	<div class="limiter" >
-		<div class="container-login100" >
-			<div class="wrap-login100" style="background-image: '../images/background.jpg';">
+		<div class="container-login100" style="background-image: url('../images/back.png');">
+			<div class="wrap-login100" style="background-color:rgba(201, 137, 0, 0.5)">
 				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" method="post">
-					<span class="login100-form-title">
-						<u>Fernandes Bank's</u><br>Recupere sua senha.
+					<span class="login100-form-title" style="background-color: rgba(0, 0, 0, 0.322); font-family: FreeMono, monospace;" >
+						Recuperar sua senha.
                         </span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate="Por favor entre com seu CPF">
