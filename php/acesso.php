@@ -85,15 +85,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <div class="signupform">
 	<div class="container">
-		<fieldset style= "background-color: white; max-width:500px;
-		padding:16px;  width: 50%; margin: 0px auto;
-		border:2px solid green;
-                -moz-border-radius:8px;
-                -webkit-border-radius:8px;
-                border-radius:8px;"><h1 style="text-align: center; font-size: 45px;
-		color: Black;
-		font-weight: 700;
-		font-family: Source Sans Pro;">Serviços Bancários</h1></fieldset>
+		<div style="text-align: center;"><img src="../images/banner2.png" style="width: 350px; height: 100px;"></div>
 		<!-- main content -->
 		<div class="agile_info">
 			<div class="w3l_form">
@@ -105,10 +97,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <h2 id="limCreditoMax" style="color: gray">Limite: </h2>
                                         <h2 id="limCredito" style="color: gray">Limite Disponível: </h2>
                                         <form method="post">
-                                        <br><br><button class="btn btn-danger btn-block" name="sair" type="submit">Sair</t></button>
+                                        <br><br><button class="btn btn-danger btn-block" name="sair" type="submit">Sair</t></button><br><br>
                                         <button class="btn btn-danger btn-block" name="cancelar" type="submit">Cancelar a conta</t></button>
                                         </form>
-					<br><br><br><br>
+					<br><br><br>
 					<fieldset><p>Deseja fazer qual tipo de transação? <br>(Sacar ou Depositar)</p><br>
 					<form method="post">
 						<div class="input-group">
