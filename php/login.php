@@ -1,6 +1,12 @@
 <?php 
-    require("connectBD.php");
     session_start();
+    if(isset($_SESSION["cpf"]) && isset($_SESSION["senha"])){
+    echo "<script>"
+            . "alert('Você está logado já!');"
+            . "window.location.href = 'acesso.php';"
+            . "</script>";
+    }
+    require("connectBD.php");
     
     $cpf = $_POST["cpf"];
     $senha = $_POST["senha"];

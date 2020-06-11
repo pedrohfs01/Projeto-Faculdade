@@ -104,7 +104,7 @@ textarea:focus, input:focus {
 }
 
 
-input::-webkit-input-placeholder { color: #1b3815;}
+input::-webkit-input-placeholder { color: #1b3815a9;}
 input:-moz-placeholder { color: #1b3815;}
 input::-moz-placeholder { color: #1b3815;}
 input:-ms-input-placeholder { color: #1b3815;}
@@ -177,13 +177,13 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background-color: rgb(255, 166, 0);
+  background-color: black;
 }
 
 .wrap-login100 {
   
   width: 600px;
-  background: green;
+  background: black;
   border-radius: 50px;
   overflow: hidden;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
@@ -216,7 +216,7 @@ iframe {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #57b846;
+  background-color: #000000;
   padding-top: 50px;
   padding-bottom: 39px;
 }
